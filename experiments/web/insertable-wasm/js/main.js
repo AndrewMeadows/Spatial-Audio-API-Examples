@@ -2,13 +2,7 @@
 
 console.log("examples/web/insertable-wasm/");
 
-var wasm_addTonePulse = Module.cwrap(
-    "addTonePulse",
-    null,
-    ["number", "number", "number"]);
-
-var wasm_helloWorld = Module.cwrap("helloWorld", null);
-var wasm_getOne = Module.cwrap("getOne", "number");
+var wasm_addTonePulse = Module.cwrap( "addTonePulse", null, ["number", "number", "number"]);
 
 // check for support of insertable streams
 if (typeof MediaStreamTrackProcessor === 'undefined' ||
